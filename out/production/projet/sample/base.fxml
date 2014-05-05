@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Base">
+  <children>
+    <ListView fx:id="list_bd" layoutX="40.0" prefHeight="269.0" prefWidth="212.0" AnchorPane.bottomAnchor="65.0" />
+    <ListView fx:id="list_table" cache="false" cacheHint="DEFAULT" mouseTransparent="false" pickOnBounds="false" prefHeight="269.0" prefWidth="212.0" AnchorPane.bottomAnchor="65.5" AnchorPane.leftAnchor="348.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="65.5" />
+    <Label layoutX="38.0" layoutY="28.0" text="Sélectionner la base de donnée :">
+      <font>
+        <Font size="16.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="362.0" layoutY="28.0" text="Sélectionner la table souhaitée :" />
+    <Button fx:id="bt_valid" layoutX="469.0" layoutY="346.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="91.0" text="Valider" />
+  </children>
+</AnchorPane>
