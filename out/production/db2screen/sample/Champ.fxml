@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="455.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.ChampValeur">
+  <children>
+    <Label layoutX="58.0" layoutY="280.0" text="Méthode">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Label>
+    <ListView fx:id="valeursdestables" layoutX="14.0" layoutY="62.0" prefHeight="200.0" prefWidth="200.0" />
+    <RadioButton fx:id="getbutton" layoutX="58.0" layoutY="319.0" mnemonicParsing="false" selected="true" text="GET">
+      <toggleGroup>
+        <ToggleGroup fx:id="groupe" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="postbutton" layoutX="107.0" layoutY="319.0" mnemonicParsing="false" text="POST" toggleGroup="$groupe" />
+    <Label layoutX="251.0" layoutY="64.0" text="Type :" />
+    <ComboBox fx:id="typebox" layoutX="318.0" layoutY="62.0" prefHeight="21.0" prefWidth="112.0" promptText="">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="text" />
+          <String fx:value="password" />
+          <String fx:value="radio" />
+          <String fx:value="checkbox" />
+          <String fx:value="liste" />
+          <String fx:value="textarea" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label layoutX="255.0" layoutY="121.0" text="Label:" />
+    <TextField fx:id="labelfield" layoutX="317.0" layoutY="121.0" prefWidth="112.0" />
+    <Button fx:id="bt_valid" layoutX="316.0" layoutY="167.0" mnemonicParsing="false" text="Valider" />
+    <Button fx:id="générer" layoutX="271.0" layoutY="275.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="131.0" text="Générer">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Label font="$x1" layoutX="15.0" layoutY="25.0" text="Sélectionner un champ :" />
+  </children>
+</AnchorPane>
