@@ -30,6 +30,7 @@ import java.util.ResourceBundle;
  * Time: 23:33
  * To change this template use File | Settings | File Templates.
  */
+
 public class ChampValeur implements Initializable {
     @FXML ListView valeursdestables;
     @FXML Button bt_valid;

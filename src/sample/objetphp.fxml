@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.0" prefWidth="497.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.ObjetPhp">
+  <children>
+    <Button fx:id="bt_enregistrer" layoutX="186.0" layoutY="254.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="126.0" text="Enregistrer sous" />
+    <TextArea fx:id="textarea" prefHeight="211.0" prefWidth="469.0" wrapText="true" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="32.0" />
+    <Label layoutX="26.0" layoutY="8.0" text="Vous pouvez modifier votre code avant de l'enregistrer :">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <Label fx:id="messageLabel" layoutX="337.0" layoutY="261.0" text="" />
+  </children>
+</AnchorPane>

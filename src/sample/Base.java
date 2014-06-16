@@ -38,6 +38,7 @@ public class Base implements Initializable {
     @FXML ListView list_bd;
     @FXML ListView list_table;
     @FXML Button bt_valid;
+    @FXML Button bt_validphp;
     private ObservableList<String> lesTablesObserves = FXCollections.observableArrayList();
     private ObservableList<String> lesBdObserves = FXCollections.observableArrayList();
     public ArrayList<String> tablelist = new ArrayList();
@@ -66,6 +67,34 @@ public class Base implements Initializable {
                     ex.printStackTrace();
                 }
                 ChampValeur c =fxmlLoader.getController();
+                c.setTableSelected(tableselected);   // On passe la table selectionné
+                c.setBdSelected(bdselected);         // On passe la base selectionné
+                c.getValeurTable();              // On lance la fonction getValeurTable afin de récuperer les valeurs des tables
+
+                Stage popUp = new Stage();
+                popUp.initModality(Modality.WINDOW_MODAL);
+                popUp.initOwner(((Node)e.getSource()).getScene().getWindow());
+                popUp.setScene(new Scene(root, 455,364));
+                popUp.show();
+
+            }
+        });
+        bt_validphp.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public  void handle(ActionEvent e) {             // Au Clic du bouton valider on ouvre base.fxml
+                URL location = getClass().getResource("objetphp.fxml");
+
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(location);
+                fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
+
+                Parent root = null;
+                try {
+                    root = (Parent) fxmlLoader.load(location.openStream());
+                }catch(Exception ex){
+                    ex.printStackTrace();
+                }
+                ObjetPhp c =fxmlLoader.getController();
                 c.setTableSelected(tableselected);   // On passe la table selectionné
                 c.setBdSelected(bdselected);         // On passe la base selectionné
                 c.getValeurTable();              // On lance la fonction getValeurTable afin de récuperer les valeurs des tables
